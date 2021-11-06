@@ -20,20 +20,19 @@ public class RestauranteDao {
         try {
             PreparedStatement p = con.prepareStatement("INSERT INTO T_RESTAURANTE(CD_RESTAURANTE, NM_RESTAURANTE, NR_CNPJ, NR_TELEFONE, DS_EMAIL, DS_ALCANCE, HR_FUNCIONAMENTO,\r\n"
             		+ "FLAG_ISO14001, T_FX_PRECO_CD_FAIXA, T_CT_BANCARIA_CD_CONTA, T_PLANO_CD_PLANO, T_DONO_CD_PROPRIETARIO, T_ENDERECO_CD_ENDERECO)\r\n"
-            		+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            p.setInt(1, newRestaurante.getCodigo());
-            p.setString(2, newRestaurante.getNome());
-            p.setString(3, newRestaurante.getCnpj());
-            p.setString(4, newRestaurante.getTelefone());
-            p.setString(5, newRestaurante.getEmail());
-            p.setInt(6, newRestaurante.getAlcance());
-            p.setTime(8, newRestaurante.getHoraFuncionamento());
-            p.setBoolean(9, newRestaurante.isFlagIso());
-            p.setObject(11, newRestaurante.getFaixaPreco());
-            p.setObject(12, newRestaurante.getConta());
-            p.setObject(12, newRestaurante.getPlano());
-            p.setObject(13, newRestaurante.getDono());
-            p.setObject(14, newRestaurante.getEndereco());
+            		+ "VALUES(seqrestaurante.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            p.setString(1, newRestaurante.getNome());
+            p.setString(2, newRestaurante.getCnpj());
+            p.setString(3, newRestaurante.getTelefone());
+            p.setString(4, newRestaurante.getEmail());
+            p.setInt(5, newRestaurante.getAlcance());
+            p.setTime(6, newRestaurante.getHoraFuncionamento());
+            p.setBoolean(7, newRestaurante.isFlagIso());
+            p.setObject(8, newRestaurante.getFaixaPreco());
+            p.setObject(9, newRestaurante.getConta());
+            p.setObject(10, newRestaurante.getPlano());
+            p.setObject(11, newRestaurante.getDono());
+            p.setObject(12, newRestaurante.getEndereco());
             
             System.out.println(p);
             p.executeUpdate();
