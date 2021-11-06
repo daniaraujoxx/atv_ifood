@@ -24,9 +24,9 @@ public class ContaBancariaDao {
         try {
             PreparedStatement p = con.prepareStatement("INSERT INTO T_CT_BANCARIA(CD_CONTA, NR_CONTA, NR_AGENCIA, DS_TIPO, NM_TITULAR) values (seqcontabancaria.nextval, ?, ?, ?, ?)");
             p.setInt(1, newContaBancaria.getNumero());
-            p.setInt(1, newContaBancaria.getAgencia());
-            p.setString(1, newContaBancaria.getTipo());
-            p.setString(1, newContaBancaria.getNomeTitular());
+            p.setInt(2, newContaBancaria.getAgencia());
+            p.setString(3, newContaBancaria.getTipo());
+            p.setString(4, newContaBancaria.getNomeTitular());
             System.out.println(p);
             p.executeUpdate();
             System.out.println("Comando executado");
