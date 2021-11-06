@@ -24,8 +24,8 @@ public class DonoDao {
         try {
             PreparedStatement p = con.prepareStatement("INSERT INTO T_DONO(CD_PROPRIETARIO, NM_PROPRIETARIO, NR_CPF, NR_RG) values (seqdono.nextval, ?, ?, ?)");
             p.setString(1, newDono.getNome());
-            p.setString(1, newDono.getCpf());
-            p.setString(1, newDono.getRg());
+            p.setString(2, newDono.getCpf());
+            p.setString(3, newDono.getRg());
             System.out.println(p);
             p.executeUpdate();
             System.out.println("Comando executado");
