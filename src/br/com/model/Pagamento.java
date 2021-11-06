@@ -1,38 +1,35 @@
 package br.com.model;
 
 public class Pagamento {
-	
-	private int codigo;
-	private int descricao;
-	
-	
-	public Pagamento(int codigo, int descricao) {
-		super();
-		this.codigo = codigo;
-		this.descricao = descricao;
-	}
+
+    private int codigo;
+    private String descricao;
 
 
-	public int getCodigo() {
-		return codigo;
-	}
+    public Pagamento(int codigo, String descricao) {
+        super();
+        this.codigo = codigo;
+        this.descricao = descricao;
+    }
 
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
-	}
+    public int getCodigo() {
+        return codigo;
+    }
 
 
-	public int getDescricao() {
-		return descricao;
-	}
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
 
 
-	public void setDescricao(int descricao) {
-		this.descricao = descricao;
-	}
-	
-	
-	
+    public String getDescricao() {
+        return descricao;
+    }
+
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
 }
