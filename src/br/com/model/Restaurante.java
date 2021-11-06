@@ -1,6 +1,7 @@
 package br.com.model;
 
 import java.sql.Time;
+import java.util.List;
 
 public class Restaurante {
 	
@@ -12,10 +13,23 @@ public class Restaurante {
 	private int alcance;
 	private Time horaFuncionamento;
 	private boolean flagIso;
+	private List<Categoria> categoria;
+	private ContaBancaria conta;
+	private Dono dono;
+	private Endereco endereco;
+	private FaixaPreco faixaPreco;
+	private List<Pagamento> pagamento;
+	private Plano plano;
 	
 	
+	public Restaurante() {
+	
+	}
+
+
 	public Restaurante(int codigo, String nome, String cnpj, String telefone, String email, int alcance,
-			Time horaFuncionamento, boolean flagIso) {
+			Time horaFuncionamento, boolean flagIso, List<Categoria> categoria, ContaBancaria conta, Dono dono,
+			Endereco endereco, FaixaPreco faixaPreco, List<Pagamento> pagamento, Plano plano) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
@@ -25,6 +39,13 @@ public class Restaurante {
 		this.alcance = alcance;
 		this.horaFuncionamento = horaFuncionamento;
 		this.flagIso = flagIso;
+		this.categoria = categoria;
+		this.conta = conta;
+		this.dono = dono;
+		this.endereco = endereco;
+		this.faixaPreco = faixaPreco;
+		this.pagamento = pagamento;
+		this.plano = plano;
 	}
 
 
@@ -106,6 +127,83 @@ public class Restaurante {
 	public void setFlagIso(boolean flagIso) {
 		this.flagIso = flagIso;
 	}
+
+
+	public List<Categoria> getCategoria() {
+		return categoria;
+	}
+
+
+	public void setCategoria(List<Categoria> categoria) {
+		this.categoria = categoria;
+	}
+
+
+	public ContaBancaria getConta() {
+		return conta;
+	}
+
+
+	public void setConta(ContaBancaria conta) {
+		this.conta = conta;
+	}
+
+
+	public Dono getDono() {
+		return dono;
+	}
+
+
+	public void setDono(Dono dono) {
+		this.dono = dono;
+	}
+
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+
+	public FaixaPreco getFaixaPreco() {
+		return faixaPreco;
+	}
+
+
+	public void setFaixaPreco(FaixaPreco faixaPreco) {
+		this.faixaPreco = faixaPreco;
+	}
+
+
+	public List<Pagamento> getPagamento() {
+		return pagamento;
+	}
+
+
+	public void setPagamento(List<Pagamento> pagamento) {
+		this.pagamento = pagamento;
+	}
+
+
+	public Plano getPlano() {
+		return plano;
+	}
+
+
+	public void setPlano(Plano plano) {
+		this.plano = plano;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
