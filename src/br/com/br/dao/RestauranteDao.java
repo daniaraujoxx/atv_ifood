@@ -26,7 +26,7 @@ public class RestauranteDao {
             p.setString(3, newRestaurante.getTelefone());
             p.setString(4, newRestaurante.getEmail());
             p.setInt(5, newRestaurante.getAlcance());
-            p.setTime(6, newRestaurante.getHoraFuncionamento());
+           p.setTime(6, newRestaurante.getHoraFuncionamento());
             p.setBoolean(7, newRestaurante.isFlagIso());
             p.setObject(8, newRestaurante.getFaixaPreco());
             p.setObject(9, newRestaurante.getConta());
